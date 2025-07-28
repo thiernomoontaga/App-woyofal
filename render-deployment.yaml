@@ -1,0 +1,48 @@
+# Configuration pour déploiement automatique sur Render
+services:
+  - type: web
+    name: appwoyofal-api
+    env: docker
+    dockerCommand: /start.sh
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: frankfurt  # ou oregon selon votre préférence
+    port: 80
+    healthCheckPath: /api/health
+    buildCommand: ""
+    startCommand: ""
+    
+    # Variables d'environnement
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DB_HOST
+        fromDatabase:
+          name: woyofal-postgres
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: woyofal-postgres
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: woyofal-postgres
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: woyofal-postgres
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: woyofal-postgres
+          property: password
+
+# Base de données PostgreSQL
+databases:
+  - name: woyofal-postgres
+    databaseName: woyofal_db
+    user: woyofal_user
+    plan: starter
+    region: frankfurt
+    version: "15"

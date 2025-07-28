@@ -1,0 +1,55 @@
+### Test de santé de l'API
+GET https://appwoyofal-api.onrender.com/api/health
+Content-Type: application/json
+
+### Vérification d'un compteur existant
+GET https://appwoyofal-api.onrender.com/api/woyofal/verifier-compteur?numero=COMP001234567890
+Content-Type: application/json
+
+### Vérification d'un compteur inexistant
+GET https://appwoyofal-api.onrender.com/api/woyofal/verifier-compteur?numero=COMP999999999999
+Content-Type: application/json
+
+### Achat de crédit Woyofal - Cas normal
+POST https://appwoyofal-api.onrender.com/api/woyofal/acheter
+Content-Type: application/json
+
+{
+    "numero_compteur": "COMP001234567890",
+    "montant": 5000
+}
+
+### Achat de crédit Woyofal - Montant élevé (plusieurs tranches)
+POST https://appwoyofal-api.onrender.com/api/woyofal/acheter
+Content-Type: application/json
+
+{
+    "numero_compteur": "COMP001234567891",
+    "montant": 25000
+}
+
+### Achat de crédit Woyofal - Compteur inexistant
+POST https://appwoyofal-api.onrender.com/api/woyofal/acheter
+Content-Type: application/json
+
+{
+    "numero_compteur": "COMP999999999999",
+    "montant": 5000
+}
+
+### Achat de crédit Woyofal - Montant invalide
+POST https://appwoyofal-api.onrender.com/api/woyofal/acheter
+Content-Type: application/json
+
+{
+    "numero_compteur": "COMP001234567890",
+    "montant": -1000
+}
+
+### Achat de crédit Woyofal - Données manquantes
+POST https://appwoyofal-api.onrender.com/api/woyofal/acheter
+Content-Type: application/json
+
+{
+    "numero_compteur": "COMP001234567890"
+}

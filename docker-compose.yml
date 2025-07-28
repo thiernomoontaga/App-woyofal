@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: appwoyofal
+    ports:
+      - "8082:80"
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=woyofal_db
+      - DB_USER=woyofal_user
+      - DB_PASSWORD=woyofal_password
+    depends_on:
+      - postgres
+    volumes:
+      - ./logs:/var/log/nginx
+    networks:
+      - woyofal_network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: woyofal_postgres
+    environment:
+      - POSTGRES_DB=woyofal_db
+      - POSTGRES_USER=woyofal_user
+      - POSTGRES_PASSWORD=woyofal_password
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    networks:
+      - woyofal_network
+
+volumes:
+  postgres_data:
+
+networks:
+  woyofal_network:
+    driver: bridge

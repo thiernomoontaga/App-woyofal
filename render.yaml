@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: appwoyofal
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    port: 80
+    healthCheckPath: /api/health
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: woyofal-postgres
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: woyofal-postgres
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: woyofal-postgres
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: woyofal-postgres
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: woyofal-postgres
+          property: password
+
+databases:
+  - name: woyofal-postgres
+    databaseName: woyofal_db
+    user: woyofal_user
+    plan: starter

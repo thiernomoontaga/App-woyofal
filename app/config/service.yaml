@@ -1,0 +1,13 @@
+core:
+  router: App\Core\Router
+  validator: App\Core\Validator\Validator
+  session: App\Core\Session
+
+service: 
+  UtilisateurService: Src\service\UtilisateurService
+  SecuriteService: Src\service\SecuriteService
+
+repositories: 
+  UtilisateurRepository: Src\repository\UtilisateurRepository
+  CompteRepository: Src\repository\CompteRepository
+  TransactionRepository: Src\repository\TransactionRepository

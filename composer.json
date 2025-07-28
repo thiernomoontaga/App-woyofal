@@ -1,0 +1,22 @@
+{
+    "name": "cherif/appwoyofal2",
+    "autoload": {
+        "psr-4": {
+            "Cherif\\Appwoyofal2\\": "src/"
+        },
+        "classmap": [
+            "app/",
+            "src/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "brahim1205",
+            "email": "sadiocheri11@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "symfony/yaml": "^7.3"
+    }
+}

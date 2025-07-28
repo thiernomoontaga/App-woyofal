@@ -1,0 +1,14 @@
+{
+  "registry": "docker.io",
+  "username": "brahim1205",
+  "repository": "appwoyofal",
+  "tags": {
+    "latest": "brahim1205/appwoyofal:latest",
+    "v1.0.0": "brahim1205/appwoyofal:1.0.0"
+  },
+  "pull_commands": {
+    "latest": "docker pull brahim1205/appwoyofal:latest",
+    "specific_version": "docker pull brahim1205/appwoyofal:1.0.0"
+  },
+  "run_command": "docker run -p 8080:80 -e DB_HOST=your_db_host -e DB_NAME=your_db_name -e DB_USER=your_db_user -e DB_PASSWORD=your_db_password brahim1205/appwoyofal:latest"
+}

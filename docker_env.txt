@@ -1,0 +1,10 @@
+DB_DRIVER=pgsql
+HOST=postgres
+PORT=5432
+DB_NAME=woyofal_db
+USER_NAME=woyofal_user
+PASSWORD=woyofal_password
+TWILIO_SID=your_twilio_sid
+TWILIO_TOKEN=your_twilio_token
+TWILIO_FROM=your_twilio_phone
+URI_HOST=http://localhost:8082
