@@ -2,7 +2,7 @@
     "name": "cherif/appwoyofal2",
     "autoload": {
         "psr-4": {
-            "Cherif\\Appwoyofal2\\": "src/"
+            "thiernomoontaga\\Appwoyofal\\": "src/"
         },
         "classmap": [
             "app/",

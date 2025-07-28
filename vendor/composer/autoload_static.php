@@ -12,18 +12,22 @@ class ComposerStaticInitf6eba23bfc7af01a638da41b0be86d5d
     );
 
     public static $prefixLengthsPsr4 = array (
+        't' => 
+        array (
+            'thiernomoontaga\\Appwoyofal\\' => 27,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\Yaml\\' => 23,
         ),
-        'C' => 
-        array (
-            'Cherif\\Appwoyofal2\\' => 19,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'thiernomoontaga\\Appwoyofal\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
@@ -32,14 +36,54 @@ class ComposerStaticInitf6eba23bfc7af01a638da41b0be86d5d
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
-        'Cherif\\Appwoyofal2\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
     );
 
     public static $classMap = array (
+        'App\\Core\\FileUpload' => __DIR__ . '/../..' . '/app/core/FileUpload.php',
+        'App\\Core\\Messages\\ValidationMessage' => __DIR__ . '/../..' . '/app/core/messages/ValidationMessage.php',
+        'App\\Core\\Validator\\Contracts\\UniqueValueCheckerInterface' => __DIR__ . '/../..' . '/app/core/Validator/contracts/UniqueValueCheckerInterface.php',
+        'App\\Core\\Validator\\Rules\\Compare' => __DIR__ . '/../..' . '/app/core/Validator/Rules/Compare.php',
+        'App\\Core\\Validator\\Rules\\FileRequiredRule' => __DIR__ . '/../..' . '/app/core/Validator/Rules/FileRequiredRule.php',
+        'App\\Core\\Validator\\Rules\\NciRule' => __DIR__ . '/../..' . '/app/core/Validator/Rules/NciRule.php',
+        'App\\Core\\Validator\\Rules\\RequiredRule' => __DIR__ . '/../..' . '/app/core/Validator/Rules/RequiredRule.php',
+        'App\\Core\\Validator\\Rules\\SenegalPhoneRule' => __DIR__ . '/../..' . '/app/core/Validator/Rules/SenegalPhoneRule.php',
+        'App\\Core\\Validator\\Rules\\TarifRule' => __DIR__ . '/../..' . '/app/core/Validator/Rules/TarifRule.php',
+        'App\\Core\\Validator\\Rules\\UniqueRule' => __DIR__ . '/../..' . '/app/core/Validator/Rules/UniqueRule.php',
+        'App\\Core\\Validator\\Rules\\UserRules' => __DIR__ . '/../..' . '/app/core/Validator/Rules/UserRules.php',
+        'App\\core\\interface\\Controller\\DeletableInterface' => __DIR__ . '/../..' . '/app/core/interface/DeletableInterface.php',
+        'App\\core\\interface\\Controller\\EditableInterface' => __DIR__ . '/../..' . '/app/core/interface/EditableInterface.php',
+        'App\\core\\interface\\Controller\\IndexableInterface' => __DIR__ . '/../..' . '/app/core/interface/IndexableInterface.php',
+        'App\\core\\interface\\Controller\\ShowableInterface' => __DIR__ . '/../..' . '/app/core/interface/ShowableInterface.php',
+        'App\\core\\interface\\Controller\\StorableInterface' => __DIR__ . '/../..' . '/app/core/interface/StorableInterface.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Src\\controller\\ErrorController' => __DIR__ . '/../..' . '/app/core/ErrorController.php',
+        'fathie\\Controller\\SimpleWoyofalController' => __DIR__ . '/../..' . '/src/controller/SimpleWoyofalController.php',
+        'fathie\\Controller\\WoyofalController' => __DIR__ . '/../..' . '/src/controller/WoyofalController.php',
+        'fathie\\Core\\Abstract\\AbstractController' => __DIR__ . '/../..' . '/app/core/abstract/AbstractController.php',
+        'fathie\\Core\\Abstract\\AbstractEntity' => __DIR__ . '/../..' . '/app/core/abstract/AbstractEntity.php',
+        'fathie\\Core\\Abstract\\AbstractRepository' => __DIR__ . '/../..' . '/app/core/abstract/AbstractRepository.php',
+        'fathie\\Core\\ControllerFactory' => __DIR__ . '/../..' . '/app/core/ControllerFactory.php',
+        'fathie\\Core\\Database' => __DIR__ . '/../..' . '/app/core/Database.php',
+        'fathie\\Core\\Router' => __DIR__ . '/../..' . '/app/core/Router.php',
+        'fathie\\Core\\Session' => __DIR__ . '/../..' . '/app/core/Session.php',
+        'fathie\\Core\\SimpleRouter' => __DIR__ . '/../..' . '/app/core/SimpleRouter.php',
+        'fathie\\Core\\Singleton' => __DIR__ . '/../..' . '/app/core/Singleton.php',
+        'fathie\\Core\\Validator\\Rules\\ValidationRuleInterface' => __DIR__ . '/../..' . '/app/core/Validator/Rules/ValidationRuleInterface.php',
+        'fathie\\Core\\Validator\\Validator' => __DIR__ . '/../..' . '/app/core/Validator/Validator.php',
+        'fathie\\Entity\\AchatEntity' => __DIR__ . '/../..' . '/src/entity/AchatEntity.php',
+        'fathie\\Entity\\ClientEntity' => __DIR__ . '/../..' . '/src/entity/ClientEntity.php',
+        'fathie\\Entity\\CompteurEntity' => __DIR__ . '/../..' . '/src/entity/CompteurEntity.php',
+        'fathie\\Entity\\JournalEntity' => __DIR__ . '/../..' . '/src/entity/JournalEntity.php',
+        'fathie\\Repository\\AchatRepository' => __DIR__ . '/../..' . '/src/repository/AchatRepository.php',
+        'fathie\\Repository\\CompteurRepository' => __DIR__ . '/../..' . '/src/repository/CompteurRepository.php',
+        'fathie\\Repository\\IAchatRepository' => __DIR__ . '/../..' . '/src/repository/IAchatRepository.php',
+        'fathie\\Repository\\IClientRepository' => __DIR__ . '/../..' . '/src/repository/IClientRepository.php',
+        'fathie\\Repository\\ICompteurRepository' => __DIR__ . '/../..' . '/src/repository/ICompteurRepository.php',
+        'fathie\\Repository\\ILoggerRepository' => __DIR__ . '/../..' . '/src/repository/ILoggerRepository.php',
+        'fathie\\Service\\IWoyofalService' => __DIR__ . '/../..' . '/src/service/IWoyofalService.php',
+        'fathie\\Service\\WoyofalService' => __DIR__ . '/../..' . '/src/service/WoyofalService.php',
+        'fathie\\core\\abstract\\AbstractService' => __DIR__ . '/../..' . '/app/core/abstract/AbstractService.php',
+        'fathie\\core\\fathie' => __DIR__ . '/../..' . '/app/core/App.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
